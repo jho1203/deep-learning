@@ -31,7 +31,7 @@ def _check_input(tensor, shape, display_name, tf_name=None):
     assert tensor.op.type == 'Placeholder', \
         '{} is not a Placeholder.'.format(display_name)
 
-    _assert_tensor_shape(tensor, shape, 'Real Input')
+    _assert_tensor_shape(tensor, shape, display_name)
 
     if tf_name:
         assert tensor.name == tf_name, \
